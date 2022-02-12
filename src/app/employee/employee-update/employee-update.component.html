@@ -1,0 +1,49 @@
+
+<body>
+        <div>
+                <div>
+                    <h1>Update User !!</h1>
+                        <form  [formGroup]="updateform"  (ngSubmit)="onUpdate()">
+                                <div >
+                                        <label >Id :- </label>
+                                        <input type="text"  formControlName="eid"  placeholder="Enter Full name"><br><br>
+
+                                        <label >Full Name :- </label>
+                                        <input type="text"  formControlName="ename"  placeholder="Enter Full name"><br><br>
+                                
+                                        <label >Email :-    </label>
+                                        <input type="text"  formControlName="email"  placeholder="Enter email"><br><br>
+                            
+                                        <div class="form-group" formArrayName="mobno">
+                                                <label class="col-sm-2 control-label">Phone</label><br>
+                                                <div class="col-sm-10" *ngFor=" let group of mobileArray.controls; let i=index;" [formGroupName]='i'>
+                                                
+                                                        <br> <div class="" >
+                                                        
+                                                                <div class="form-group">
+                                                                        <input type="text"  class="form-control" formControlName="mobid"value="" />
+                                                                        <input type="text" class="form-control" formControlName="mobileno" placeholder="+91 8000000000" /><br>
+                                                                </div>
+                                                                
+                                                        </div>
+                                                        
+                                                        
+                                                        <button type="button"(click)="addmobileno()" class="btn btn-success  btn-sm btn-add-phone"><span class="glyphicon glyphicon-plus"></span> Add Phone</button>&nbsp;
+                                                        <button type="button"(click)="removemobileno(i)" class="btn btn-success btn-sm btn-add-phone"><span class="glyphicon glyphicon-plus"></span>Remove Mobile</button>
+                                                        
+                                                </div><br>
+                                                
+                                             </div>
+                                       
+                            
+                                        <label >Password :- </label>
+                                        <input type="password"  formControlName="password" placeholder="Enter Password"><br><br>
+    
+    
+                                        <button type="submit" class="btn btn-success">Update</button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+    </body>
+    

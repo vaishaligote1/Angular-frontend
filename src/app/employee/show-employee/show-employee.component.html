@@ -1,0 +1,26 @@
+<body>
+   
+    <table class="table">
+      <div class="table-light">
+        <th class="thead-dark">
+          <tr scope="row">#</tr>
+          <tr scope="row">Emp Id</tr>
+          <tr scope="row">status</tr>
+          <tr scope="row">Emp Name</tr>
+          <tr scope="row">Email</tr>
+          <tr scope="row">Password</tr>
+          <tr scope="row">Mobileno</tr>
+        </th>
+        <td >
+          <tr scope="row">Details</tr>
+          <tr scope="row">{{emp.eid}}</tr>
+          <tr scope="row">{{emp.status}}</tr>
+          <tr scope="row">{{emp.ename}}</tr>
+          <tr scope="row">{{emp.email}}</tr>
+          <tr scope="row">{{emp.password}}</tr>
+          <tr scope="row"><td><tr>Mobile id - Mobile no</tr></td></tr>
+          <tr scope="row" *ngFor="let mob of emp.mobno"><td><tr>{{mob.mobid}}-{{mob.mobileno}}</tr></td></tr>
+        </td>
+      </div>
+    </table>
+</body>
